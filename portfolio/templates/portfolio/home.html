@@ -1,0 +1,43 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row justify-content-center my-3">
+  <div class="col-5">
+    <img src="{% static 'portfolio/me.jpg' %}" class="img-fluid">
+  </div>
+</div>
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 style="font-size:1.2vw;" id="hometext" class="font-weight-bold">Hello World! ;) <br></br>Antônio Pinheiro é um programador, apaixonado em aprender novas tecnologias!
+      O site também possui uma área de blog onde apresento tutoriais, dicas tecnológicas sobre linguagens de programação, hardware, sistemas operacionais Windows, Linux e Redes.  
+      <p></p>Seja muito bem-vindo! &#x1F60E;</h1>
+  </div>
+</div>
+
+
+<h2 class="mt-5">Portfólio GitHub</h2>
+<hr>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

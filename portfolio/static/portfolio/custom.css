@@ -1,0 +1,43 @@
+.navbar-nav .nav-link {
+    /* color: rgba(0,0,0,1) !important; */
+    color: rgb(248, 245, 245) !important;
+    
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(108, 130, 255) !important;
+    
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 120px;
+}
+
+
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}
+
+.rodape {
+   
+    position: relative;
+    bottom:0;
+    width:100%;
+    height: 100px; 
+    margin: 80px 0 0 0;
+    padding: 10px 0px;
+    text-align: center;
+    line-height: 40px;
+  }
+       
